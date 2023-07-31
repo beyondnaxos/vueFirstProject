@@ -33,3 +33,8 @@ npm run build
 ```sh
 npm run lint
 ```
+
+
+ref permet de récupérer une référence sur un élément du DOM
+reactive permet de créer une variable reactive
+computed permet de créer une variable calculée : exem
