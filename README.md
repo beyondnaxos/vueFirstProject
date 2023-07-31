@@ -35,6 +35,53 @@ npm run lint
 ```
 
 
-ref permet de récupérer une référence sur un élément du DOM
-reactive permet de créer une variable reactive
-computed permet de créer une variable calculée : exem
+ref permet de récupérer une référence sur un élément du DOM : exemple : 
+```js
+const count = ref(0)
+```
+
+reactive permet de créer une variable reactive : exemple : 
+```js
+const state = reactive({
+  count: 0
+})
+```
+
+computed permet de créer une variable calculée : exemple : 
+```js
+const count = ref(0)
+const plusOne = computed(() => count.value + 1)
+```
+
+watch permet de créer un watcher : exemple : 
+```js
+const count = ref(0)
+watch(count, (count, prevCount) => {
+  /* ... */
+})
+```
+
+watchEffect permet de créer un watcher qui s'execute au moins une fois : exemple : 
+```js
+const count = ref(0)
+watchEffect((onInvalidate) => {
+  /* ... */
+})
+```
+
+onMounted permet d'executer une fonction au moment du montage du composant : exemple : 
+```js
+onMounted(() => {
+  /* ... */
+})
+```
+
+emit permet d'envoyer un événement à un composant parent : exemple : 
+```js
+const count = ref(0)
+const increment = () => {
+  count.value++
+  emit('increment')
+}
+```
+
