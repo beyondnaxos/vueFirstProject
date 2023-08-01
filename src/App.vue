@@ -4,8 +4,6 @@
 
 
 <script setup>
-
-// import HelloWorld from './components/HelloWorld.vue'
 import getData from './components/getData.vue'
 
 </script>
